@@ -16,8 +16,36 @@ class User(AbstractUser):
         (GENDER_OTHER, "Other"),
     )
 
+    LANGUAGE_ENGLISH = "en"
+    LANGUAGE_FRENCH = "fr"
+    LANGUAGE_KOREAN = "kr"
+
+    LANGUAGE_CHOICES = (
+        (LANGUAGE_ENGLISH, "English"),
+        (LANGUAGE_FRENCH, "French"),
+        (LANGUAGE_KOREAN, "Korean"),
+    )
+
+    CURRENCY_CAD = "cad"
+    CURRENCY_USD = "usd"
+    CURRENCY_KRW = "krw"
+
+    CURRENCY_CHOICES = (
+        (CURRENCY_CAD, "CAD"),
+        (CURRENCY_USD, "USD"),
+        (CURRENCY_KRW, "KRW"),
+    )
+
     avatar = models.ImageField(null=True, blank=True)
     gender = models.CharField(
         choices=GENDER_CHOICES, max_length=10, null=True, blank=True
     )
     bio = models.TextField(default="", blank=True)
+    birthdate = models.DateField(null=True)
+    language = models.CharField(
+        choices=LANGUAGE_CHOICES, max_length=2, null=True, blank=True
+    )
+    currency = models.CharField(
+        choices=CURRENCY_CHOICES, max_length=3, null=True, blank=True
+    )
+    superhost = models.BooleanField(default=False)

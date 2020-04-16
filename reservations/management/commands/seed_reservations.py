@@ -1,11 +1,13 @@
 import random
+from datetime import datetime, timedelta
 from django.core.management.base import BaseCommand
 from django_seed import Seed
-from reviews import models as review_models
+from reservations import models as reservation_models
 from users import models as user_models
 from rooms import models as room_models
 
-NAME = "reviews"
+
+NAME = "reservations"
 
 
 class Command(BaseCommand):
@@ -23,18 +25,18 @@ class Command(BaseCommand):
         users = user_models.User.objects.all()
         rooms = room_models.Room.objects.all()
         seeder.add_entity(
-            review_models.Review,
+            reservation_models.Reservation,
             number,
             {
-                "accuracy": lambda x: random.randint(0, 5),
-                "communication": lambda x: random.randint(0, 5),
-                "cleanliness": lambda x: random.randint(0, 5),
-                "location": lambda x: random.randint(0, 5),
-                "check_in": lambda x: random.randint(0, 5),
-                "value": lambda x: random.randint(0, 5),
+                "status": lambda x: random.choice(["pending", "confirmed", "canceled"]),
+                "guest": lambda x: random.choice(users),
                 "room": lambda x: random.choice(rooms),
-                "user": lambda x: random.choice(users),
+                "check_in": lambda x: datetime.now(),
+                "check_out": lambda x: datetime.now()
+                + timedelta(days=random.randint(3, 25)),
             },
         )
+
         seeder.execute()
+
         self.stdout.write(self.style.SUCCESS(f"{number} {NAME} created!"))

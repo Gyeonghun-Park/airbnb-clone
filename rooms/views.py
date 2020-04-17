@@ -1,7 +1,12 @@
+from math import ceil
 from django.shortcuts import render
+from django.core.paginator import Paginator
 from . import models
 
 
 def all_rooms(request):
-    all_rooms = models.Room.objects.all()
-    return render(request, "rooms/home.html", context={"potato": all_rooms})
+    page = request.GET.get("page")
+    room_list = models.Room.objects.all()
+    paginator = Paginator(room_list, 10)
+    rooms = paginator.get_page(page)
+    return render(request, "rooms/home.html", {"rooms": rooms})

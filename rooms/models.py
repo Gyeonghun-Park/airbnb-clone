@@ -96,6 +96,9 @@ class Room(core_models.TimeStampedModel):
         self.city = str.capitalize(self.city)
         super().save(*args, **kwargs)
 
+    def get_absolute_url(self):
+        return reverse("rooms:detail", kwargs={"pk": self.pk})
+
     def total_rating(self):
         all_reviews = self.reviews.all()
         if len(all_reviews) == 0:

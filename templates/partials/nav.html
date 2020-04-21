@@ -1,4 +1,11 @@
 <a href="{% url "core:home" %}">Landbnb</a>
 <ul>
-    <li><a href="{% url "users:login" %}">Login</a></li>
+    <!-- context proecessor that adds information to templates: https://docs.djangoproject.com/en/3.0/ref/templates/api/#using-requestcontext -->
+    <!-- context processor gets cookie and puts in template -->
+    <!-- is_authenticated: https://docs.djangoproject.com/en/3.0/topics/auth/default/#authentication-in-web-requests -->
+    {% if user.is_authenticated %}
+        <li><a href="{% url "users:logout" %}">Log out</a></li>
+    {% else %}
+        <li><a href="{% url "users:login" %}">Log in</a></li>
+    {% endif %}
 </ul>

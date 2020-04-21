@@ -7,9 +7,12 @@ from . import forms
 
 class LoginView(View):
     def get(self, request):
-        form = forms.LoginForm()
+        form = forms.LoginForm(initial={"email": "something@whatever.com"})
         return render(request, "users/login.html", {"form": form})
 
     def post(self, request):
         form = forms.LoginForm(request.POST)
-        print(form)
+        if form.is_valid():
+            # cleaned data is the cleaned result of all fields
+            print(form.cleaned_data)
+        return render(request, "users/login.html", {"form": form})

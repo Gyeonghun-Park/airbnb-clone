@@ -9,11 +9,13 @@ Log In
 
 {% block content %}
 
-<!-- https://docs.djangoproject.com/en/3.0/ref/csrf/ -->
-<form method="POST" action="{% url "users:login" %}">
-    {% csrf_token %}
-    {{form.as_p}}
-    <button>Login</button>
-</form>
+    {% include 'partials/social_login.html' %}
+
+    <!-- https://docs.djangoproject.com/en/3.0/ref/csrf/ -->
+    <form method="POST" action="{% url "users:login" %}">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button>Login</button>
+    </form>
 
 {% endblock content %}

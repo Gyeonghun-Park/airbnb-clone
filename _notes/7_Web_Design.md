@@ -60,3 +60,9 @@ npx tailwindcss init
 - rem is relative to root font size
 
 ## 20 Design
+
+### [Cloning Airbnb login](./templates/users/login.html)
+
+- Example page for Cloning
+
+  ![image-20200316212523408](_img/airbnb_login.png)

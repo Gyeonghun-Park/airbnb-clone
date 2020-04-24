@@ -61,6 +61,21 @@ Cloning Airbnb with Python, Django, Tailwind and more... 💖🐍
 - urls.py is request
 - views.py is response
 
+## [Notes #6: Users app Login, Logout and Sign up](./_notes/6_Users_app_Login_Logout_and_Sign_up.md)
+
+- Using OAuth to log user in with Github & Kakao
+
+  - Users are redirected to request their GitHub identity
+  - Users are redirected back to your site by GitHub
+  - Your app accesses the API with the user's access token
+
+## [Notes #7: Web decoration with Tailwind and Gulp](./_notes/7_Web_Design.md)
+
+- [Calling tailwind css as class names in html](https://tailwindcss.com/)
+- Extensions
+  - Use Tailwind CSS intelilisense for tailwind class lookup
+  - DON'T FORGET TO RESTART VSCODE AFTER INSTALL
+
 ### My development environment
 
 - System: zsh 5.4.2 (x86_64-ubuntu-linux-gnu) on Windows 10 Education N(1909)

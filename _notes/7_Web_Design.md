@@ -9,8 +9,6 @@
 - Pug.js -> ugly HTML
 - uploading to github automization
 
-### [Check gulp project for details of dependencies](https://github.com/snoop2head/gulp-gulp-gulp)
-
 we do not utilize babel nor yarn for this project
 
 ```shell

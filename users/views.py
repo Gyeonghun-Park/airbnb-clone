@@ -38,9 +38,16 @@ class SignUpView(FormView):
         form.save()
         email = form.cleaned_data.get("email")
         password = form.cleaned_data.get("password")
-        user = authenticate(self.request, username=email, password=password)
+
+        user = models.User.objects.get(email=email)
         if user is not None:
-            login(self.request, user)
+            user = authenticate(self.request, username=email, password=password)
+            if user is not None:
+                login(self.request, user)
+        else:
+            raise forms.ValidationError(
+                "That email is already taken", code="existing_user"
+            )
         user.verify_email()
         return super().form_valid(form)
 

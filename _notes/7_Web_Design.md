@@ -65,7 +65,7 @@ npx tailwindcss init
 
 - Example page for Cloning
 
-  ![image-20200316212523408](_img/airbnb_login.png)
+  ![airbnb login page for cloning](_img/airbnb_login.png)
 
 ## 21 User Profile, Edit Profile, Change Password
 
@@ -88,3 +88,21 @@ npx tailwindcss init
   ```
 
 - Some shortcut methods provide a [standard way](https://docs.djangoproject.com/en/3.0/ref/contrib/messages/#adding-a-message) to add messages with commonly used tags (which are usually represented as HTML classes for the message)
+
+### Django get_absolute_url()
+
+- When it comes to web development you really want to avoid hard coding paths in your templates
+
+- This method enables admin panel to work "View on site" link
+
+  ![airbnb login page for cloning](_img/admin_viewOnSite.png)
+
+[Example of absolute url](../templates/partials/nav.html):
+
+```HTML
+<!-- hard coding url -->
+ <li class="nav_link"><a href="{{% url "users:profile" user.pk %}}">Profile</a></li>
+
+<!-- absolute url -->
+ <li class="nav_link"><a href="{{user.get_absolute_url}}">Profile</a></li>
+```

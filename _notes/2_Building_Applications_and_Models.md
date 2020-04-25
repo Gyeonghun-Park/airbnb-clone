@@ -47,7 +47,7 @@ Models have fields. For the fields you put in models.py, will make be turned int
 - admin.py regards about admin panel of the website.
 - you can create filter(like excel) for fields in table: such as currency or superhost
 
-# [4. Building Rooms Applications](./rooms)
+# [4. Building Rooms Applications](../rooms)
 
 ## [Refer to cloning webpage. Rooms App's functions are: ](*https://www.airbnb.com/rooms/22320269?location=Seoul&source_impression_id=p3_1581697502_PpMPhvPC73I2KD%2BU*)
 
@@ -55,14 +55,14 @@ Models have fields. For the fields you put in models.py, will make be turned int
 - room photo upload
 - describing room's specifications(price, option, type...)
 
-## [Making Core Application](./core)
+## [Making Core Application](../core)
 
 - This is application that is not visible to users.
 
   - The purpose of this app is to simplify repetetive calling onto certain model: such as timestamp
-    - [In this app's models.py, we made TimeStamped class](./core/models.py) as subject for the call up
-    - [TimeStamped class](./core/models.py) will be used in all the other apps.
-    - [On the other hand, Users app imported AbstractUser class from Django default models only](./users/models.py).
+    - [In this app's models.py, we made TimeStamped class](../core/models.py) as subject for the call up
+    - [TimeStamped class](../core/models.py) will be used in all the other apps.
+    - [On the other hand, Users app imported AbstractUser class from Django default models only](../users/models.py).
 
 - All the other application names should be plural, except for this kind of application.
 
@@ -78,7 +78,7 @@ Models have fields. For the fields you put in models.py, will make be turned int
 
 ## WorkFlow when creating Rooms app
 
-### 1. [At project's settings.py](./settings.py), install apps that I built. This is to let Django project know which are apps.py to use for the project.
+### 1. [At project's settings.py](../settings.py), install apps that I built. This is to let Django project know which are apps.py to use for the project.
 
 ```python
 # Letting Django know my established Project apps by stating here.
@@ -93,7 +93,7 @@ PROJECT_APPS = [
 AUTH_USER_MODEL = "users.User"
 ```
 
-### 2. [At individual application's models.py,](./rooms/models.py) shape database & connect between tables of other application's models.py
+### 2. [At individual application's models.py,](../rooms/models.py) shape database & connect between tables of other application's models.py
 
 - **Write packages / modules in order**
 
@@ -158,7 +158,7 @@ class Room(core_models.TimeStampedModel):
 
 ```
 
-### 3. [At individual application's admin.py](./rooms/admin.py), register table models that you built previously.
+### 3. [At individual application's admin.py](../rooms/admin.py), register table models that you built previously.
 
 ```python
 from django.contrib import admin
@@ -183,9 +183,9 @@ python manage.py migrate
 
 ### 5. At the webpage, check Admin panel.
 
-### 6. [At individual application's models.py,](./rooms/models.py) setup verbose name to forcefully designate names that is displayed on Admin webpage.
+### 6. [At individual application's models.py,](../rooms/models.py) setup verbose name to forcefully designate names that is displayed on Admin webpage.
 
-# [5. Other Applications](./reservations)
+# [5. Other Applications](../reservations)
 
 ### - Reviews application
 

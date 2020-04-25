@@ -1,4 +1,4 @@
-# [6. Room Admin Panel & Site](./rooms/admin.py)
+# [6. Room Admin Panel & Site](../rooms/admin.py)
 
 - Making representative tables on webpage
 - Making Search fileds
@@ -33,7 +33,7 @@
 
 ### Getting foreignkeys & manytomany Queryset
 
-- [In this case, users is poining at reviews with foreignkey.](./reviews/models.py)
+- [In this case, users is poining at reviews with foreignkey.](../reviews/models.py)
 
   ```python
   user = models.ForeignKey(
@@ -75,7 +75,7 @@
   room.reviews.all()
   ```
 
-* [In this case, many to many relationship is established between amenities and rooms.](./rooms/models.py)
+* [In this case, many to many relationship is established between amenities and rooms.](../rooms/models.py)
 
   ```python
   amenities = models.ManyToManyField("Amenity", related_name="rooms", blank=True)
@@ -110,7 +110,7 @@
 
 * **You should use related_names field in models.py in order to get queryset.**
 
-* **related_names is for the target.** [Next example is when users table points rooms table with foreignkey](./rooms/models.py), but didn't set related_name inside of field.
+* **related_names is for the target.** [Next example is when users table points rooms table with foreignkey](../rooms/models.py), but didn't set related_name inside of field.
 
 ```python
   host = models.ForeignKey(
@@ -126,7 +126,7 @@ In this case. At Manage.py Shell, when you look up queryset of users received fr
   "AttributeError: 'myam' object has no attribute 'rooms'"
 ```
 
-따라서 [rooms의 models.py에서](./rooms/models.py) users로 pointing한다. users과 rooms을 연결하는 foreignkey 부분에 related_name을 추가함으로서, users에 "rooms"라는 queryset을 보낸다.
+따라서 [rooms의 models.py에서](../rooms/models.py) users로 pointing한다. users과 rooms을 연결하는 foreignkey 부분에 related_name을 추가함으로서, users에 "rooms"라는 queryset을 보낸다.
 
 ```python
 host = models.ForeignKey(
@@ -155,11 +155,11 @@ Filtering queryset: get queryset with specified options
 
 # 8. Adding Fields to Admin Panels
 
-- [User Admin panel](./users/admin.py) doesn't refer to [models.py](/users/models.py), but rather refers to [Django's default UserAdmin class.](/Users/noopy/.local/share/virtualenvs/django-airbnb-clone-AcLC9Tzu/lib/python3.8/site-packages/django/contrib/auth/admin.py)
+- [User Admin panel](../users/admin.py) doesn't refer to [models.py](/users/models.py), but rather refers to [Django's default UserAdmin class.](/Users/noopy/.local/share/virtualenvs/django-airbnb-clone-AcLC9Tzu/lib/python3.8/site-packages/django/contrib/auth/admin.py)
 
-- Until now, [we have been making custom function on admin.py, for example, rooms' admin panel](./rooms/admin.py). But now, [we are making user rating average function at the reviews models.py](./reviews/models.py), and [deploying it on reviews Admin panel](./reviews/admin.py).
+- Until now, [we have been making custom function on admin.py, for example, rooms' admin panel](../rooms/admin.py). But now, [we are making user rating average function at the reviews models.py](../reviews/models.py), and [deploying it on reviews Admin panel](../reviews/admin.py).
 
-- We've switched between rooms app and reviews app. Average reviews ratings of a room was reflected on room admin panel. We also used queryset to get functions on the other app. [Check commit log to see details.](https://github.com/snoop2head/django_airbnb_cloning/commit/19d8912cc69d37fab9f12ddbd49c4f5d73cf7a94)
+- We've switched between rooms app and reviews app. Average reviews ratings of a room was reflected on room admin panel. We also used queryset to get functions on the other app. [Check commit log to see details.](https://github.com/Gyeonghun-Park/airbnb-clone/commit/58e65295d430d82e0142fe77ab985f39a1f592c4)
 
 - list_display to display models.py fields on admin panel
 
@@ -169,7 +169,7 @@ Filtering queryset: get queryset with specified options
   from django.utils import timezone
   ```
 
-- Project directory, URL router at [./config/settings.py](./config/settings.py)
+- Project directory, URL router at [../config/settings.py](../config/settings.py)
 
 ```python
 # yields /Users/noopy/django-airbnb-clone/uploads
@@ -186,7 +186,7 @@ DEBUG = True
 MEDIA_URL = "/media/"  # "/media" slash / in fronth means absolute
 ```
 
-- You cannot change function name "urlpatterns" at [config/urls.py](./config/urls.py)
+- You cannot change function name "urlpatterns" at [config/urls.py](../config/urls.py)
 
 - Django doesn't render scripts (or html code), if it is not marked safe.
 
@@ -204,7 +204,7 @@ MEDIA_URL = "/media/"  # "/media" slash / in fronth means absolute
 
 ### !Super is super important!
 
-- [save() methods is controlling models](./rooms/models.py)
+- [save() methods is controlling models](../rooms/models.py)
 
   ```python
   def save(self, *args, **kwargs):
@@ -215,7 +215,7 @@ MEDIA_URL = "/media/"  # "/media" slash / in fronth means absolute
           super().save(*args, **kwargs)
   ```
 
-- [save_model is controlling admin](./rooms/admin.py)
+- [save_model is controlling admin](../rooms/admin.py)
 
   ```python
   def save_model(self, request, obj, form, change):

@@ -7,8 +7,8 @@
 ![basic-django](https://mdn.mozillademos.org/files/13931/basic-django.png)
 
 - **template: user interaction**
-  - [sends {{form}} to forms.py](./templates/users/login.html)
-  - [routes {% url "users:signup" %} to urls.py](./templates/partials/nav.html)
+  - [sends {{form}} to forms.py](../templates/users/login.html)
+  - [routes {% url "users:signup" %} to urls.py](../templates/partials/nav.html)
 - **urls.py: connection between views.py and template**
   - urlpatterns
     - utilizes classes & functions from user app's views.py
@@ -56,49 +56,32 @@ https://medium.com/shecodeafrica/understanding-the-mvc-pattern-in-django-edda05b
   - use blocks in all_rooms.html
   - create partials such as footers, headers and include it on base.html
 
-- [At ./config/settings.py ](./config/settings.py), change the following
+- [At ./config/settings.py ](../config/settings.py), change the following
 
   ```python
   "DIRS": [os.path.join(BASE_DIR, "templates")],  # where to look for templates
   ```
 
-- [./config/urls.py](./config/urls.py)
+- [./config/urls.py](../config/urls.py)
 
   - serves as routes.js
 
-- [./core/urls.py](./core/urls.py)
+- [./core/urls.py](../core/urls.py)
 
   - serves as globalRouter.js
-  - [urls.py](./core/urls.py) needs to be made manually in core apps folder
+  - [urls.py](../core/urls.py) needs to be made manually in core apps folder
 
-- [./rooms/urls.py](./rooms/urls.py)
+- [./rooms/urls.py](../rooms/urls.py)
 
   - serves as roomRouter.js
 
-- [./rooms/views.py](./rooms/views.py)
+- [./rooms/views.py](../rooms/views.py)
 
   - serves as controller.js.
   - views.py is between ./app/models.py and html static files using context
   - controlls html file with context
 
 # 11. HomeView
-
-Before learning Django class based views, we should know what's going on behind pagination.
-
-### 1. Hard Coding Pagination
-
-- [using views.py and html file to manually make page 1 ~ 15 navigation on lower bar](https://github.com/snoop2head/django_airbnb_cloning/commit/1af8a6e64bb8f19f4d765ebd514b71050117455b)
-- [pagenation manually done: simple logic using django built-in template tags on static html file](https://github.com/snoop2head/django_airbnb_cloning/commit/dc35af21ba30416d98b6bb3273897bdfa03b7d4c)
-
-### 2. Semi Coding Pagination
-
-- [using django paginator class and methods](https://github.com/snoop2head/django_airbnb_cloning/commit/6e93b5d56cfe691d3ba3d623585c6e503ae43b5f)
-- [using methods in paginator class to paginate website](https://github.com/snoop2head/django_airbnb_cloning/commit/bf1facb38f0b64bc2bab48db7e62eae3160e042f)
-- [django handling exceptions, redirecting to home when page number exceeds](https://github.com/snoop2head/django_airbnb_cloning/commit/0e80d145bab4a40084d8f2c1b159f957324c5a98)
-
-### 3. Using Class Based Views
-
-- [Simplest: inheriting ListView class to paginate](https://github.com/snoop2head/django_airbnb_cloning/commit/ef5c4d017928b1a0a5133b94504893d790f5e006)
 
 # 12 DetailView
 
@@ -148,8 +131,8 @@ can be rewritten as
 
 ### Development Workflow: Function Based Views
 
-- [Make form on template at html](./templates/rooms/search.html)
-- Receive from template as get request at views.py. [Inside views.py, there are three parts:](./rooms/views.py)
+- [Make form on template at html](../templates/rooms/search.html)
+- Receive from template as get request at views.py. [Inside views.py, there are three parts:](../rooms/views.py)
   - Get request: form which receives user request
   - Querying database: refer to fields names at models.py and get objects.
   - Reponse: render html file or raise error

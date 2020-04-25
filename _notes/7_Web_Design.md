@@ -73,11 +73,11 @@ npx tailwindcss init
 
 - Quite commonly in web applications, you need to display a one-time notification message (also known as “flash message”) to the user after processing a form or some other types of user input
 
-- The default [settings.py](./config/settings.py) created by django-admin startproject already contains all the settings required to enable message functionality
+- The default [settings.py](../config/settings.py) created by django-admin startproject already contains all the settings required to enable message functionality
 
 ### Adding messages
 
-- To use the message, import it to [views.py](./users/views.py) first
+- To use the message, import it to [views.py](../users/views.py) first
 
   ```shell
   from django.contrib import messages

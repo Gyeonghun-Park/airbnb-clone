@@ -24,8 +24,6 @@ python manage.py migrate
 
 - Django has database fields for everything: email field, text field... Just call for fields.
 
-![image-20200213015216499](/Users/noopy/Library/Application Support/typora-user-images/image-20200213015216499.png)
-
 - installing module on python virtual environment SHOULD NOT BE DONE WITH pip.
   Use pipenv
 
@@ -42,8 +40,6 @@ Models have fields. For the fields you put in models.py, will make be turned int
 - charfield: yields text field with limit of single line webpage
 - datefield: yields calendar selection on webpage
 - boolean field: true of false checkbox
-
-![image-20200214211005945](/Users/noopy/Library/Application Support/typora-user-images/image-20200214211005945.png)
 
 ### admin.py: Admin Panel
 
@@ -115,10 +111,7 @@ from core import models as core_models
 - **[Foreign Key (one to multiple) in models.py](https://docs.djangoproject.com/en/3.0/ref/models/fields/)**
 
   - foreign key is connecting one model to the many other. source of the connection is user, and it connects to multiple rooms.
-  - Room database(or table) looks like this ![image-20200215131251118](/Users/noopy/Library/Application Support/typora-user-images/image-20200215131251118.png)
   - Foreign Key(FK:USER) calls data from another database(or sheet), which is user table.
-    ![image-20200215131329179](/Users/noopy/Library/Application Support/typora-user-images/image-20200215131329179.png)
-
   - For example, many instagram posts per user or many youtube posts per google user.
 
 - **[Many to Many Relationship in models.py](https://docs.djangoproject.com/en/3.0/ref/models/fields/)**
@@ -190,11 +183,7 @@ python manage.py migrate
 
 ### 5. At the webpage, check Admin panel.
 
-![image-20200216003543786](/Users/noopy/Library/Application Support/typora-user-images/image-20200216003543786.png)
-
 ### 6. [At individual application's models.py,](./rooms/models.py) setup verbose name to forcefully designate names that is displayed on Admin webpage.
-
-![image-20200216004144914](/Users/noopy/Library/Application Support/typora-user-images/image-20200216004144914.png)
 
 # [5. Other Applications](./reservations)
 

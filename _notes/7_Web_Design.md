@@ -66,3 +66,25 @@ npx tailwindcss init
 - Example page for Cloning
 
   ![image-20200316212523408](_img/airbnb_login.png)
+
+## 21 User Profile, Edit Profile, Change Password
+
+### [The messages framework](https://docs.djangoproject.com/en/3.0/ref/contrib/messages/)
+
+- Quite commonly in web applications, you need to display a one-time notification message (also known as “flash message”) to the user after processing a form or some other types of user input
+
+- The default [settings.py](./config/settings.py) created by django-admin startproject already contains all the settings required to enable message functionality
+
+### Adding messages
+
+- To use the message, import it to [views.py](./users/views.py) first
+
+  ```shell
+  from django.contrib import messages
+
+  ....
+
+  messages.error(request, e)
+  ```
+
+- Some shortcut methods provide a [standard way](https://docs.djangoproject.com/en/3.0/ref/contrib/messages/#adding-a-message) to add messages with commonly used tags (which are usually represented as HTML classes for the message)

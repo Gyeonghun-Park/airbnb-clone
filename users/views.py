@@ -5,6 +5,7 @@ from django.views.generic import FormView
 from django.urls import reverse_lazy
 from django.shortcuts import redirect, reverse
 from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
 from . import forms, models
 
 
@@ -90,7 +91,7 @@ def github_callback(request):
             token_json = token_request.json()
             error = token_json.get("error", None)
             if error is not None:
-                raise GithubException()
+                raise GithubException("Can't get access token")
             else:
                 access_token = token_json.get("access_token")
                 profile_request = requests.get(
@@ -109,7 +110,9 @@ def github_callback(request):
                     try:
                         user = models.User.objects.get(email=email)
                         if user.login_method != models.User.LOGIN_GITHUB:
-                            raise GithubException()
+                            raise GithubException(
+                                f"Please log in with: {user.login_method}"
+                            )
                     except models.User.DoesNotExist:
                         user = models.User.objects.create(
                             email=email,
@@ -121,11 +124,12 @@ def github_callback(request):
                         user.set_unusable_password()
                         user.save()
                     login(request, user)
+                    messages.success(request, f"Welcome back {user.first_name}")
                     return redirect(reverse("core:home"))
                 else:
-                    raise GithubException()
+                    raise GithubException("Can't get your profile")
         else:
-            raise GithubException()
-    except GithubException:
-        # send error message
+            raise GithubException("Can't get code")
+    except GithubException as e:
+        messages.error(request, e)
         return redirect(reverse("users:login"))

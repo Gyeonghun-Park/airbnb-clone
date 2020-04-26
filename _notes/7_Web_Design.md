@@ -138,3 +138,15 @@ from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 
 class EmailLoginOnlyView(UserPassesTestMixin):
 ```
+
+## 22 Room Detail
+
+### [Pluralize](https://docs.djangoproject.com/en/3.0/ref/templates/builtins/#pluralize)
+
+- Returns a plural suffix if the value is not 1, '1', or an object of length 1. By default, this suffix is 's'
+
+Example [room_detail.py](../templates/rooms/room_detail.html):
+
+```HTML
+<span class="mr-5 font-light">{{room.beds}} bed{{room.beds|pluralize}}</span>
+```

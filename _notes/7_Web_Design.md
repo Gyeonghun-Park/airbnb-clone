@@ -106,3 +106,35 @@ npx tailwindcss init
 <!-- absolute url -->
  <li class="nav_link"><a href="{{user.get_absolute_url}}">Profile</a></li>
 ```
+
+### [Adding messages in class-based views](https://docs.djangoproject.com/en/3.0/ref/contrib/messages/#adding-messages-in-class-based-views)
+
+- Adds a success message attribute to FormView based classes
+
+Example [views.py](../users/views.py):
+
+```shell
+from django.contrib.messages.views import SuccessMessageMixin
+
+...
+
+class LoginView(mixins.LoggedOutOnlyView, FormView):
+```
+
+- You can also use customizing messages through [mixins](https://docs.djangoproject.com/en/3.0/topics/auth/default/#django.contrib.auth.mixins.UserPassesTestMixin)
+  - You can use this when you want to send a different kind of message instead of a success message
+  - Example: [mixins.py](../users/mixins.py)
+
+### Mixins
+
+- This can prevent users from accessing the wrong page through url manipulation
+
+Example [mixins.py](../users/mixins.py):
+
+```shell
+from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
+
+...
+
+class EmailLoginOnlyView(UserPassesTestMixin):
+```

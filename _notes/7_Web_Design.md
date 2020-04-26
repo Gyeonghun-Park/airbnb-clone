@@ -150,3 +150,5 @@ Example [room_detail.py](../templates/rooms/room_detail.html):
 ```HTML
 <span class="mr-5 font-light">{{room.beds}} bed{{room.beds|pluralize}}</span>
 ```
+
+## 23 Update Room, Create Room, Room Photos

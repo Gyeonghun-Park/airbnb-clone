@@ -97,29 +97,29 @@ npx tailwindcss init
 
   ![airbnb login page for cloning](_img/admin_viewOnSite.png)
 
-[Example of absolute url](../templates/partials/nav.html):
+  [Example of absolute url](../templates/partials/nav.html):
 
-```HTML
-<!-- hard coding url -->
- <li class="nav_link"><a href="{{% url "users:profile" user.pk %}}">Profile</a></li>
+  ```HTML
+  <!-- hard coding url -->
+  <li class="nav_link"><a href="{{% url "users:profile" user.pk %}}">Profile</a></li>
 
-<!-- absolute url -->
- <li class="nav_link"><a href="{{user.get_absolute_url}}">Profile</a></li>
-```
+  <!-- absolute url -->
+  <li class="nav_link"><a href="{{user.get_absolute_url}}">Profile</a></li>
+  ```
 
 ### [Adding messages in class-based views](https://docs.djangoproject.com/en/3.0/ref/contrib/messages/#adding-messages-in-class-based-views)
 
 - Adds a success message attribute to FormView based classes
 
-Example [views.py](../users/views.py):
+  Example [views.py](../users/views.py):
 
-```shell
-from django.contrib.messages.views import SuccessMessageMixin
+  ```shell
+  from django.contrib.messages.views import SuccessMessageMixin
 
-...
+  ...
 
-class LoginView(mixins.LoggedOutOnlyView, FormView):
-```
+  class LoginView(mixins.LoggedOutOnlyView, FormView):
+  ```
 
 - You can also use customizing messages through [mixins](https://docs.djangoproject.com/en/3.0/topics/auth/default/#django.contrib.auth.mixins.UserPassesTestMixin)
   - You can use this when you want to send a different kind of message instead of a success message
@@ -129,15 +129,15 @@ class LoginView(mixins.LoggedOutOnlyView, FormView):
 
 - This can prevent users from accessing the wrong page through url manipulation
 
-Example [mixins.py](../users/mixins.py):
+  Example [mixins.py](../users/mixins.py):
 
-```shell
-from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
+  ```shell
+  from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 
-...
+  ...
 
-class EmailLoginOnlyView(UserPassesTestMixin):
-```
+  class EmailLoginOnlyView(UserPassesTestMixin):
+  ```
 
 ## 22 Room Detail
 
@@ -145,10 +145,28 @@ class EmailLoginOnlyView(UserPassesTestMixin):
 
 - Returns a plural suffix if the value is not 1, '1', or an object of length 1. By default, this suffix is 's'
 
-Example [room_detail.py](../templates/rooms/room_detail.html):
+  Example [room_detail.py](../templates/rooms/room_detail.html):
 
-```HTML
-<span class="mr-5 font-light">{{room.beds}} bed{{room.beds|pluralize}}</span>
-```
+  ```HTML
+  <span class="mr-5 font-light">{{room.beds}} bed{{room.beds|pluralize}}</span>
+  ```
 
 ## 23 Update Room, Create Room, Room Photos
+
+### [The login_required decorator](https://docs.djangoproject.com/en/3.0/topics/auth/default/#the-login-required-decorator)
+
+- If the user is logged in, execute the view normally. The view code is free to assume the user is logged in
+
+- If the user isn’t logged in, redirect to settings.LOGIN_URL, passing the current absolute path in the query string
+
+  - I added LOGIN_URL to [settings.py](../config/settings.py)
+
+  Example [views.py](../rooms/views.py):
+
+  ```shell
+  from django.contrib.auth.decorators import login_required
+  ...
+
+  @login_required
+  def delete_photo(request, room_pk, photo_pk):
+  ```

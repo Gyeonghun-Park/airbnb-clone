@@ -79,7 +79,7 @@ npx tailwindcss init
 
 - To use the message, import it to [views.py](../users/views.py) first
 
-  ```shell
+  ```py
   from django.contrib import messages
 
   ....
@@ -113,7 +113,7 @@ npx tailwindcss init
 
   Example [views.py](../users/views.py):
 
-  ```shell
+  ```py
   from django.contrib.messages.views import SuccessMessageMixin
 
   ...
@@ -131,7 +131,7 @@ npx tailwindcss init
 
   Example [mixins.py](../users/mixins.py):
 
-  ```shell
+  ```py
   from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 
   ...
@@ -163,7 +163,7 @@ npx tailwindcss init
 
   Example [views.py](../rooms/views.py):
 
-  ```shell
+  ```py
   from django.contrib.auth.decorators import login_required
   ...
 
@@ -179,3 +179,23 @@ npx tailwindcss init
 
 - In this project, two calendar object (this month, next month) are required
   - These objects are sent from [cal.py](../cal.py) to [models.py](../rooms/models.py)
+
+### [Custom template tags and filters](https://docs.djangoproject.com/en/3.0/howto/custom-template-tags/)
+
+- You may find yourself needing functionality that is not covered by the core set of template primitives
+
+- You can extend the template engine by defining custom [tags](https://docs.djangoproject.com/en/3.0/ref/templates/builtins/#built-in-tag-reference) and [filters](https://docs.djangoproject.com/en/3.0/ref/templates/builtins/#filter) using Python, and then make them available to your templates using the {% load %} tag
+
+- Your custom tags and filters will live in a module inside the [templatetags](../rooms/templatetags) directory
+
+  Example of the directory:
+
+  ```
+  rooms/
+      __init__.py
+      models.py
+      templatetags/
+          __init__.py
+          is_booked.py
+      views.py
+  ```

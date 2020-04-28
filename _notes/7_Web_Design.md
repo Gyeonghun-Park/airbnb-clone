@@ -170,3 +170,12 @@ npx tailwindcss init
   @login_required
   def delete_photo(request, room_pk, photo_pk):
   ```
+
+## 24 Reservations and Reviews
+
+### [Calendar](https://docs.python.org/3/library/calendar.html#module-calendar)
+
+- This module allows you to output calendars like the Unix cal program, and provides additional useful functions related to the calendar
+
+- In this project, two calendar object (this month, next month) are required
+  - These objects are sent from [cal.py](../cal.py) to [models.py](../rooms/models.py)

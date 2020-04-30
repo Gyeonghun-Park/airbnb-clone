@@ -199,3 +199,20 @@ npx tailwindcss init
           is_booked.py
       views.py
   ```
+
+## [Validators](https://docs.djangoproject.com/en/3.0/ref/validators/)
+
+- A validator is a callable that takes a value and raises a ValidationError if it doesn’t meet some criteria. Validators can be useful for re-using validation logic between different types of fields
+
+  You can add this to a model field via the field’s validators argument:
+
+  ```py
+  from django.db import models
+
+  class MyModel(models.Model):
+    even_field = models.IntegerField(validators=[validate_even])
+  ```
+
+### 25 Translations, Lists and Messages
+
+## [Translation](https://docs.djangoproject.com/en/3.0/topics/i18n/translation/)

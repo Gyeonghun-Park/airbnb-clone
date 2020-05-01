@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-30 23:24-0400\n"
+"POT-Creation-Date: 2020-04-30 23:41-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,10 +30,42 @@ msgstr "무단 복제를 금지 합니다."
 msgid "All rights reserved"
 msgstr "저작권 보유"
 
+#: templates/partials/nav.html:7
+msgid "Stop hosting"
+msgstr "호스팅 중지"
+
+#: templates/partials/nav.html:9
+msgid "Start hosting"
+msgstr "호스팅 시작"
+
+#: templates/partials/nav.html:14
+msgid "Create Room"
+msgstr "방 생성"
+
+#: templates/partials/nav.html:16
+msgid "Profile"
+msgstr "프로필"
+
+#: templates/partials/nav.html:17
+msgid "Log out"
+msgstr "로그아웃"
+
+#: templates/partials/nav.html:19
+msgid "Log in"
+msgstr "로그인"
+
+#: templates/partials/nav.html:20
+msgid "Sign up"
+msgstr "회원가입"
+
+#: templates/rooms/room_detail.html:31
+msgid "Save to Favourites"
+msgstr "즐겨찾기에 저장"
+
 #: templates/rooms/room_list.html:26
 #, python-format
 msgid "Page %(current_page)s of %(total_pages)s"
-msgstr "%(total_pages)중 %(current_page)페이지"
+msgstr "%(total_pages)s 페이지 중 %(current_page)s 페이지"
 
 #: users/mixins.py:13
 msgid "Can't go there"

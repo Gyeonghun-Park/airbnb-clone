@@ -15,7 +15,7 @@
         {% endif %}
             <li class="nav_link"><a href="{% url 'lists:see-favs' %}">{% trans "Favs" %} 
                 ({% if user.list.rooms.count %}
-                    {user.list.rooms.count}
+                    {{user.list.rooms.count}}
                 {% else %}
                     0
                 {% endif %})

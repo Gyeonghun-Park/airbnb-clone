@@ -40,7 +40,7 @@ class ReservationDetailView(View):
             and reservation.room.host != self.request.user
         ):
             raise Http404()
-            form = review_forms.CreateReviewForm()
+        form = review_forms.CreateReviewForm()
         return render(
             self.request,
             "reservations/detail.html",

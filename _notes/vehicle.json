@@ -1,0 +1,156 @@
+[
+  {
+    "ID": "14X25",
+    "PN": "Mercedes-AMG GT 63 S 4MATIC+ 4-Door Coupe",
+    "GN": "Mercedes-AMG_GT_63_S_4MATIC+_4-Door_Coupe.png",
+    "CP": "184599.99",
+    "MSRP": "182600",
+    "QOH": "0",
+    "QOBO": "8",
+    "ITEM": "Three 4-door coupes pair brilliant technology with breathtaking design to offer an unmatched experience for the driver and up to four fortunate passengers",
+    "BRAND": "Mercedes-Benz"
+  },
+  {
+    "ID": "14X45",
+    "PN": "Mercedes-AMG C 63 S Sedan",
+    "GN": "Mercedes-AMG_C_63_S_Sedan.png",
+    "CP": "85400",
+    "MSRP": "84400",
+    "QOH": "0",
+    "QOBO": "2",
+    "ITEM": "No car in its segment can claim the performance pedigree of an AMG C-Class. Countless German Touring Car Championships fill its trophy case",
+    "BRAND": "Mercedes-Benz"
+  },
+  {
+    "ID": "14X46",
+    "PN": "Mercedes A 220 4MATIC Sedan",
+    "GN": "Mercedes_A_220_4MATIC_Sedan.png",
+    "CP": "36399.99",
+    "MSRP": "37300",
+    "QOH": "24",
+    "QOBO": "0",
+    "ITEM": "A is for attention-getting. The clean lines, LED lighting and aggressive stance of the A-Class Sedan are designed to capture admiring eyes",
+    "BRAND": "Mercedes-Benz"
+  },
+  {
+    "ID": "14X48",
+    "PN": "Mercedes G 550 SUV",
+    "GN": "Mercedes_G_550_SUV.png",
+    "CP": "137999.99",
+    "MSRP": "147900",
+    "QOH": "0",
+    "QOBO": "60",
+    "ITEM": "What makes an icon iconic? When it follows only its own moral compass. When its design is shaped by its genuine capability.",
+    "BRAND": "Mercedes-Benz"
+  },
+  {
+    "ID": "14X50",
+    "PN": "Mercedes GLE 350 4MATIC SUV",
+    "GN": "Mercedes_GLE_350_4MATIC_SUV.png",
+    "CP": "63699.99",
+    "MSRP": "64700",
+    "QOH": "68",
+    "QOBO": "2",
+    "ITEM": "The luxury SUV that started the segment once again leads the way. Roomier, with an 80mm-longer wheelbase, it's also more agile and aerodynamic",
+    "BRAND": "Mercedes-Benz"
+  },
+  {
+    "ID": "14X60",
+    "PN": "BMW X6 M Competition 2020",
+    "GN": "BMW_X6_M_Competition_2020.png",
+    "CP": "109699.99",
+    "MSRP": "117600",
+    "QOH": "6",
+    "QOBO": "2",
+    "ITEM": "The BMW X6 M models demonstrate their extroverted dominance with outstanding driving dynamics, expressive M design and unrivalled agility",
+    "BRAND": "BMW"
+  },
+  {
+    "ID": "14X62",
+    "PN": "BMW M8 Gran Coupe Competition 2020",
+    "GN": "BMW_M8_Gran_Coupe_Competition_2020.jpg",
+    "CP": "142999.99",
+    "MSRP": "143900",
+    "QOH": "18",
+    "QOBO": "2",
+    "ITEM": "The BMW 8 Series Gran Coupe M Models are remarkable sports cars with four doors",
+    "BRAND": "BMW"
+  },
+  {
+    "ID": "14X84",
+    "PN": "BMW M2 CS 2020",
+    "GN": "BMW_M2_CS_2020.png",
+    "CP": "97899.99",
+    "MSRP": "97750",
+    "QOH": "10",
+    "QOBO": "0",
+    "ITEM": "The BMW 2 Series Coupe M models embody sporty driving fun in its purest expression",
+    "BRAND": "BMW"
+  },
+  {
+    "ID": "14XA4",
+    "PN": "BMW 745Le 2020",
+    "GN": "BMW_745Le_2020.png",
+    "CP": "122399.99",
+    "MSRP": "122300",
+    "QOH": "10",
+    "QOBO": "0",
+    "ITEM": "The BMW 7 Series Sedan stands for self-assured presence, exceptional performance and maximum comfort",
+    "BRAND": "BMW"
+  },
+  {
+    "ID": "19X40",
+    "PN": "Maserati Ghibli S Q4",
+    "GN": "Maserati_Ghibli_S_Q4.png",
+    "CP": "95399.99",
+    "MSRP": "95320",
+    "QOH": "4",
+    "QOBO": "0",
+    "ITEM": "Ghibli maintains that tradition of empowered, race-bred performance-combining a smooth, luxurious ride with razor-sharp, coupe-like handling",
+    "BRAND": "Maserati"
+  },
+  {
+    "ID": "19X50",
+    "PN": "Maserati Levante GTS",
+    "GN": "Maserati_Levante_GTS.png",
+    "CP": "142999.99",
+    "MSRP": "142090",
+    "QOH": "13",
+    "QOBO": "0",
+    "ITEM": "Levante is a wind that blows across the Mediterranean, transforming from benign calm to gale force in an instant",
+    "BRAND": "Maserati"
+  },
+  {
+    "ID": "19X60",
+    "PN": "Maserati Quattroporte S Q4",
+    "GN": "Maserati_Quattroporte_S_Q4.png",
+    "CP": "142999.99",
+    "MSRP": "142090",
+    "QOH": "16",
+    "QOBO": "0",
+    "ITEM": "Maserati introduced the world's first-ever luxury sports sedan, with a powerful racing engine fitted to a beautifully designed luxury sedan",
+    "BRAND": "Maserati"
+  },
+  {
+    "ID": "19X80",
+    "PN": "Maserati GranTurismo Sport",
+    "GN": "Maserati_GranTurismo_Sport.png",
+    "CP": "179999.99",
+    "MSRP": "178000",
+    "QOH": "20",
+    "QOBO": "0",
+    "ITEM": "GranTurismo coupes are its direct descendants, offering a tantalizing blend of exclusive style, progressive technology and surging power-with a spine-tingling soundtrack to match",
+    "BRAND": "Maserati"
+  },
+  {
+    "ID": "19X90",
+    "PN": "Maserati GranTurismo Convertible MC",
+    "GN": "Maserati_GranTurismo_Convertible_MC.png",
+    "CP": "190599.99",
+    "MSRP": "190500",
+    "QOH": "21",
+    "QOBO": "0",
+    "ITEM": "GranTurismo Convertibles-exclusive GT automobiles that blend Italian style, technology and immense power-with a soul-stirring soundtrack unique to Maserati",
+    "BRAND": "Maserati"
+  }
+]

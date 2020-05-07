@@ -15,7 +15,7 @@ Cloning Airbnb with Python, Django, Tailwind and more... 💖🐍
 
 ### Individual application folders' structure
 
-- apps.py: configuration file which is installed [at the project's settings.py](./config/setttings.py)
+- apps.py: configuration file which is installed [at the project's settings.py](./config/settings.py)
 - models.py: describing how database look like.
 - admin.py: reflects changes on models.py to admin panel
 - views.py: function that renders html
@@ -75,6 +75,10 @@ Cloning Airbnb with Python, Django, Tailwind and more... 💖🐍
 - Extensions
   - Use Tailwind CSS intelilisense for tailwind class lookup
   - DON'T FORGET TO RESTART VSCODE AFTER INSTALL
+
+## [Notes #8: Deploying airbnb clone application using AWS Elastic Beanstalk](./_notes/8_Deployment_to_AWS.mdd)
+
+- Ongoing...
 
 ### My development environment
 

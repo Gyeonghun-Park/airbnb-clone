@@ -68,7 +68,7 @@
   {
     "ID": "14X62",
     "PN": "BMW M8 Gran Coupe Competition 2020",
-    "GN": "BMW_M8_Gran_Coupe_Competition_2020.jpg",
+    "GN": "BMW_M8_Gran_Coupe_Competition_2020.png",
     "CP": "142999.99",
     "MSRP": "143900",
     "QOH": "18",
@@ -88,12 +88,23 @@
     "BRAND": "BMW"
   },
   {
+    "ID": "14X86",
+    "PN": "BMW M340i xDrive Sedan 2020",
+    "GN": "BMW_M340i_xDrive_Sedan_2020.png",
+    "CP": "54999.99",
+    "MSRP": "54995",
+    "QOH": "6",
+    "QOBO": "2",
+    "ITEM": "Barely on the road and the BMW 3 Series Sedan is already leaving everything behind it, including conventions and expectations",
+    "BRAND": "BMW"
+  },
+  {
     "ID": "14XA4",
     "PN": "BMW 745Le 2020",
     "GN": "BMW_745Le_2020.png",
     "CP": "122399.99",
     "MSRP": "122300",
-    "QOH": "10",
+    "QOH": "5",
     "QOBO": "0",
     "ITEM": "The BMW 7 Series Sedan stands for self-assured presence, exceptional performance and maximum comfort",
     "BRAND": "BMW"

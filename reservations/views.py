@@ -13,6 +13,8 @@ class CreateError(Exception):
 
 
 def create(request, room, year, month, day):
+    if not request.user.is_authenticated:
+        return redirect(reverse("users:login"))
     try:
         date_obj = datetime.datetime(year, month, day)
         room = room_models.Room.objects.get(pk=room)
@@ -28,7 +30,7 @@ def create(request, room, year, month, day):
             check_in=date_obj,
             check_out=date_obj + datetime.timedelta(days=1),
         )
-        return redirect(reverse("reservations:detail", kwargs={"pk": reservation.pk}))
+    return redirect(reverse("reservations:detail", kwargs={"pk": reservation.pk}))
 
 
 class ReservationDetailView(View):

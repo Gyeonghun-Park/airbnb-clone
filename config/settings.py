@@ -180,3 +180,4 @@ if not DEBUG:
         integrations=[DjangoIntegration()],
         send_default_pii=True,
     )
+

@@ -1,5 +1,7 @@
 # Airbnb Cloning using Django
 
+### **View Completed Site: [LandBnb](http://airbnb-clone2-dev.us-east-1.elasticbeanstalk.com/)**
+
 Cloning Airbnb with Python, Django, Tailwind and more... 💖🐍
 
 ### Django Project Folder & File Structure

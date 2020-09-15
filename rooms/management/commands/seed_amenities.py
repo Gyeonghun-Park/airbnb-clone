@@ -56,4 +56,4 @@ class Command(BaseCommand):
 
         for a in amenities:
             Amenity.objects.create(name=a)
-        self.stdout.write(self.style.SUCCESS(f"{number} {NAME} created!"))
+        self.stdout.write(self.style.SUCCESS(f"{NAME} created!"))
